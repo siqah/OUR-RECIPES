@@ -65,15 +65,21 @@ input:focus {
 
 
 .card-image {
-  width :100%
-  
+  width :80%;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-top: 10%;
 }
+
 
 .card-body {
   padding: 10px;
   text-align: center;
 
 }
+
 
 .category {
   color:#a1a1a1 ;
