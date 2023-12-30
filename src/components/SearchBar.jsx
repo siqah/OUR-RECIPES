@@ -13,15 +13,9 @@ const SearchBar = ({
                 className="form-control"
                 placeholder="Search Recipe"
                 name="query"
-                disabled={isLoading}
+                autoFocus={!isLoading}
                 onChange={(event) => setQuery(event.target.value)}
             />   
-            <input
-                disabled={isLoading || !query}
-                type="submit"
-                className="btn"
-                value="Search"
-            />
         </form>
     )
 };

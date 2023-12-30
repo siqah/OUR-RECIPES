@@ -9,25 +9,19 @@ function App() {
   const [query, setQuery] = useState("");
   const [recipes, setRecipes] = useState([]);
   
-  // search for the recipe
-
-  const searchRecipes = async () => {
-    setIsLoading(true);
-    const url = searchApi + query
-    const res = await fetch(url);
-    const data = await res.json();
-    setRecipes(data.meals);
-    setIsLoading(false);
-  };
-
   useEffect(() => {
-    searchRecipes()
-  },[]);
+    const searchRecipes = async () => {
+      setIsLoading(true);
+      const url = searchApi + query;
+      const res = await fetch(url);
+      const data = await res.json();
+      setRecipes(data.meals);
+      setIsLoading(false);
+    };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+    // Invoke the searchRecipes function here
     searchRecipes();
-  }
+  }, [query]);
 
   return (
     <div className="container">
@@ -36,18 +30,18 @@ function App() {
         isLoading={isLoading}
         query={query}
         setQuery={setQuery}
-        handleSubmit={handleSubmit}
       />
       <div className="recipes">
-        
-        {recipes ? recipes.map(recipe => (
-          <RecipeCard
-             key={recipe.idMeal}
-             recipe={recipe}
-          />
-        )) : "No Results."}
+        {recipes ? (
+          recipes.map((recipe) => (
+            <RecipeCard key={recipe.idMeal} recipe={recipe} />
+          ))
+        ) : (
+          <p>No Results.</p>
+        )}
       </div>
     </div>
   );
 }
+
 export default App;
