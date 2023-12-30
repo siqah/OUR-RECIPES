@@ -56,15 +56,17 @@ input:focus {
 
 .card {
   width: 200px;
-  background-color: #fff;
+  background-color:gray;
   margin: 10px;
   border-radius: 5px;
   padding-bottom: 10px;
+  border-radius: 125;
 }
 
 
 .card-image {
   width :100%
+  
 }
 
 .card-body {
@@ -74,7 +76,7 @@ input:focus {
 }
 
 .category {
-  calor:#a1a1a1 ;
+  color:#a1a1a1 ;
   
 }
 

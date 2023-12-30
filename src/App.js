@@ -31,6 +31,7 @@ function App() {
 
   return (
     <div className="container">
+      
       <h2>Our Food Recipes</h2>
       <SearchBar isLoading={isLoading} query={query} setQuery={setQuery} />
       <div className="recipes">
