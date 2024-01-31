@@ -10,6 +10,9 @@
   margin: 30px auto;
   border-radius: 20px;
   padding: 10px;
+  max-width: 800px; /* Set a maximum width for better readability on larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
 }
 
 h2{
@@ -20,12 +23,16 @@ form {
   display: flex;
   width: 100%;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
 }
 
 input {
   border: 1px solid #f7f7f7;
   padding: 10px;
   font: size 16px;
+  width: 100%;
 }
 
 input:focus {
@@ -61,6 +68,11 @@ input:focus {
   border-radius: 5px;
   padding-bottom: 10px;
   border-radius: 125;
+  transition: transform 0.2s
+}
+
+.card:hover {
+  transform: scale(1.05); /* Enlarge the card on hover for better interaction on touch devices */
 }
 
 
@@ -71,8 +83,13 @@ input:focus {
   align-items: center;
   margin-left: 10%;
   margin-top: 10%;
+  max-width: 100%;
+  height: auto;
 }
 
+.card-image:hover {
+  transform: scale(1.05);
+}
 
 .card-body {
   padding: 10px;
@@ -92,4 +109,18 @@ a {
   padding:10px;
   border-radius: 10px;
   text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  
+   .card {
+    width: 125px;
+    background-color:gray;
+    margin: 25px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    border-radius: 125;
+    transition: transform 0.2s
+  }
 }
