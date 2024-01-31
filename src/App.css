@@ -84,9 +84,9 @@ input:focus {
   margin-left: 10%;
   margin-top: 10%;
   max-width: 100%;
-  height: auto;
+  height: aut
+o;
 }
-
 .card-image:hover {
   transform: scale(1.05);
 }
@@ -114,13 +114,31 @@ a {
 @media (max-width: 480px) {
   
    .card {
-    width: 125px;
+    width: 480px;
+    
     background-color:gray;
     margin: 25px;
     border-radius: 5px;
     padding-left: 5px;
     padding-bottom: 10px;
-    border-radius: 125;
+    border-radius: 10px;
     transition: transform 0.2s
   }
+
+  .card-image {
+    width: ;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 10%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-body {
+    padding: 10px;
+    text-align: center;
+  
+  }
+  
 }
